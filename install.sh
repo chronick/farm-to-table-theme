@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Farm to Table Theme - Local Installer
+# Endless Bounty Theme - Local Installer
 # Installs theme to VS Code and/or Cursor via symlink
 
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
-THEME_NAME="farm-to-table-theme"
+THEME_NAME="endless-bounty"
 
 install_to_editor() {
     local editor_name="$1"
@@ -26,7 +26,7 @@ install_to_editor() {
     fi
 }
 
-echo "Installing Farm to Table theme..."
+echo "Installing Endless Bounty theme..."
 echo ""
 
 # VS Code

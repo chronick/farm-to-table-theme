@@ -1,6 +1,25 @@
 # Changelog
 
-All notable changes to Farm to Table theme will be documented in this file.
+All notable changes to Endless Bounty theme will be documented in this file.
+
+## [1.2.0] - 2026-01-13
+
+### Changed
+- **Renamed project from "Farm to Table" to "Endless Bounty"**
+- Dark theme syntax colors now match the vibrant harvest palette (Spinach, Carrot, Apple, Squash, Eggplant, Honey, Tomato, Sage)
+- Light theme status bar and title bar now use matching dark oak wood tones
+- Light theme remote button changed from teal to blue for better consistency
+
+### Added
+- 11ty-powered documentation site with theme-aware templates
+- Status bar previews in documentation
+- More sophisticated Cooklang recipe examples (Sunday Pot Roast, Family Week meal plan, Grocery Store aisle.conf)
+- `npm run dev` for local site development
+- `npm run build` for building documentation
+
+### Technical
+- Documentation site now reads colors directly from theme JSON files
+- Theme colors automatically sync between VS Code themes and documentation
 
 ## [1.1.0] - 2026-01-12
 

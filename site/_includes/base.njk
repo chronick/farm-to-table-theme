@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — VS Code Theme</title>
+  <meta name="description" content="A warm, organic VS Code color theme inspired by fresh-picked vegetables at the farmers market.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --soil: {{ theme.dark.colors['editor.background'] }};
+      --soil-light: {{ theme.dark.colors['sideBar.background'] }};
+      --canvas: {{ theme.light.colors['editor.background'] }};
+      --canvas-dark: {{ theme.light.colors['sideBar.background'] }};
+      --spinach: {{ theme.palette.spinach }};
+      --carrot: {{ theme.palette.carrot }};
+      --apple: {{ theme.palette.apple }};
+      --squash: {{ theme.palette.squash }};
+      --eggplant: {{ theme.palette.eggplant }};
+      --honey: {{ theme.palette.honey }};
+      --tomato: {{ theme.palette.tomato }};
+      --sage: {{ theme.palette.sage }};
+      --straw: {{ theme.dark.colors['editor.foreground'] }};
+      --cream: {{ theme.dark.colors['sideBar.foreground'] }};
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--soil);
+      color: var(--cream);
+      line-height: 1.6;
+    }
+
+    code, .code-block, .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    {{ css | safe }}
+  </style>
+</head>
+<body>
+  {{ content | safe }}
+</body>
+</html>

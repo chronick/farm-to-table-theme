@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Farm to Table Light",
+  "name": "Endless Bounty Light",
   "type": "light",
   "colors": {
     "editor.background": "#fefcf8",
@@ -48,16 +48,16 @@
     "titleBar.inactiveForeground": "#a09080",
     "titleBar.border": "#4a4238",
 
-    "statusBar.background": "#b85030",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.border": "#c86040",
-    "statusBar.debuggingBackground": "#d02020",
+    "statusBar.background": "#3a3028",
+    "statusBar.foreground": "#f8f4ec",
+    "statusBar.border": "#4a4038",
+    "statusBar.debuggingBackground": "#b84040",
     "statusBar.debuggingForeground": "#ffffff",
-    "statusBar.noFolderBackground": "#984020",
-    "statusBarItem.hoverBackground": "#c86040",
-    "statusBarItem.prominentBackground": "#2d8818",
+    "statusBar.noFolderBackground": "#2d261f",
+    "statusBarItem.hoverBackground": "#4a4238",
+    "statusBarItem.prominentBackground": "#4a7a32",
     "statusBarItem.prominentForeground": "#ffffff",
-    "statusBarItem.remoteBackground": "#188868",
+    "statusBarItem.remoteBackground": "#2858a0",
     "statusBarItem.remoteForeground": "#ffffff",
 
     "tab.activeBackground": "#fefcf8",

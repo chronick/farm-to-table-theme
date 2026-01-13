@@ -1,7 +1,7 @@
 {
-  "name": "farm-to-table-theme",
-  "displayName": "Farm to Table",
-  "description": "A warm, organic color theme inspired by fresh-picked vegetables at the farmers market. Featuring spinach greens, carrot oranges, apple reds, and earthy soil tones.",
+  "name": "endless-bounty",
+  "displayName": "Endless Bounty",
+  "description": "A warm, organic VS Code color theme inspired by fresh-picked vegetables at the farmers market. Featuring spinach greens, carrot oranges, apple reds, and earthy soil tones.",
   "version": "1.0.0",
   "publisher": "chronick",
   "license": "MIT",
@@ -28,28 +28,41 @@
   "contributes": {
     "themes": [
       {
-        "label": "Farm to Table Dark",
+        "label": "Endless Bounty Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/farm-to-table-dark.json"
+        "path": "./themes/endless-bounty-dark.json"
       },
       {
-        "label": "Farm to Table Light",
+        "label": "Endless Bounty Light",
         "uiTheme": "vs",
-        "path": "./themes/farm-to-table-light.json"
+        "path": "./themes/endless-bounty-light.json"
       }
     ],
     "languages": [
       {
         "id": "cooklang",
-        "aliases": ["Cooklang", "cooklang"],
-        "extensions": [".cook", ".menu"],
+        "aliases": [
+          "Cooklang",
+          "cooklang"
+        ],
+        "extensions": [
+          ".cook",
+          ".menu"
+        ],
         "configuration": "./language-configuration.json"
       },
       {
         "id": "cooklang-conf",
-        "aliases": ["Cooklang Config", "aisle.conf"],
-        "filenames": ["aisle.conf"],
-        "extensions": [".conf"],
+        "aliases": [
+          "Cooklang Config",
+          "aisle.conf"
+        ],
+        "filenames": [
+          "aisle.conf"
+        ],
+        "extensions": [
+          ".conf"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -68,14 +81,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chronick/farm-to-table-theme"
+    "url": "git+https://github.com/chronick/endless-bounty.git"
   },
-  "homepage": "https://chronick.github.io/farm-to-table-theme/",
+  "homepage": "https://chronick.github.io/endless-bounty/",
   "bugs": {
-    "url": "https://github.com/chronick/farm-to-table-theme/issues"
+    "url": "https://github.com/chronick/endless-bounty/issues"
   },
   "galleryBanner": {
     "color": "#1a1611",
     "theme": "dark"
+  },
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --input=site --output=docs",
+    "build": "npx @11ty/eleventy --input=site --output=docs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
   }
 }
