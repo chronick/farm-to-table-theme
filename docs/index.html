@@ -315,7 +315,70 @@
       color: var(--sage);
       margin-top: 0.25rem;
     }
-    
+
+    .file-types {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .file-types code {
+      background: var(--soil-light);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--straw);
+    }
+
+    /* Examples Section */
+    .examples-section {
+      padding: 3rem 2rem;
+      background: var(--soil-light);
+    }
+
+    .examples-section h2 {
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      color: var(--straw);
+    }
+
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .example-card {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .example-card.dark {
+      background: var(--soil);
+      border: 1px solid #2a2420;
+    }
+
+    .example-header {
+      padding: 0.75rem 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #151210;
+      color: var(--sage);
+      border-bottom: 1px solid #2a2420;
+    }
+
+    .example-card .code-block {
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 1rem;
+      background: #151210;
+    }
+
     /* Footer */
     footer {
       padding: 2rem;
@@ -422,13 +485,97 @@ Sauté <span class="cook-ing">@onion</span><span class="punctuation">{</span><sp
   <section class="cooklang-section">
     <h2>🍳 First-Class Cooklang Support</h2>
     <p>
-      We love <a href="https://cooklang.org/" target="_blank" rel="noopener">Cooklang</a> — the recipe markup language that lets you manage recipes as plain text files. Farm to Table includes beautiful syntax highlighting for <code>.cook</code> files.
+      We love <a href="https://cooklang.org/" target="_blank" rel="noopener">Cooklang</a> — the recipe markup language that lets you manage recipes as plain text files. Farm to Table includes syntax highlighting for all Cooklang formats.
     </p>
     <div class="cooklang-features">
       <div class="cooklang-feature" style="color: var(--spinach);">@ingredients<span>spinach green</span></div>
       <div class="cooklang-feature" style="color: var(--apple);">#cookware<span>apple red</span></div>
       <div class="cooklang-feature" style="color: var(--eggplant);">~{timers}<span>eggplant purple</span></div>
       <div class="cooklang-feature" style="color: var(--honey);">{amounts}<span>honey gold</span></div>
+    </div>
+    <div class="file-types">
+      <code>.cook</code> recipes
+      <code>.menu</code> meal plans
+      <code>aisle.conf</code> shopping config
+    </div>
+  </section>
+
+  <!-- Cooklang Examples -->
+  <section class="examples-section">
+    <h2>Cooklang Examples</h2>
+    <div class="examples-grid">
+
+      <!-- .cook example -->
+      <div class="example-card dark">
+        <div class="example-header">.cook — Easy Pancakes</div>
+        <div class="code-block">
+<span class="cook-meta-k">>> source:</span> <span class="cook-meta-v">grandma's recipe box</span>
+<span class="cook-meta-k">>> servings:</span> <span class="cook-meta-v">4</span>
+
+<span class="comment">-- A weekend breakfast classic</span>
+
+Crack the <span class="cook-ing">@eggs</span><span class="punctuation">{</span><span class="cook-amt">3</span><span class="punctuation">}</span> into a <span class="cook-ware">#blender</span>,
+then add the <span class="cook-ing">@flour</span><span class="punctuation">{</span><span class="cook-amt">125</span><span class="punctuation">%</span><span class="cook-unit">g</span><span class="punctuation">}</span>,
+<span class="cook-ing">@milk</span><span class="punctuation">{</span><span class="cook-amt">250</span><span class="punctuation">%</span><span class="cook-unit">ml</span><span class="punctuation">}</span> and <span class="cook-ing">@sea salt</span><span class="punctuation">{</span><span class="cook-amt">1</span><span class="punctuation">%</span><span class="cook-unit">pinch</span><span class="punctuation">}</span>.
+
+Pour into a <span class="cook-ware">#bowl</span> and leave
+to stand for <span class="cook-time">~{15%minutes}</span>.
+
+Melt <span class="cook-ing">@butter</span><span class="punctuation">{</span><span class="cook-amt">1</span><span class="punctuation">%</span><span class="cook-unit">tbsp</span><span class="punctuation">}</span> in a
+<span class="cook-ware">#large non-stick frying pan</span>.</div>
+      </div>
+
+      <!-- .menu example -->
+      <div class="example-card dark">
+        <div class="example-header">.menu — Weekly Meal Plan</div>
+        <div class="code-block">
+<span class="punctuation">---</span>
+<span class="cook-meta-k">servings:</span> <span class="cook-meta-v">2</span>
+<span class="punctuation">---</span>
+
+<span class="md-h2">==Monday==</span>
+
+<span class="keyword">Breakfast:</span>
+<span class="punctuation">-</span> <span class="cook-ing">@oatmeal</span><span class="punctuation">{</span><span class="cook-amt">2</span><span class="punctuation">%</span><span class="cook-unit">bowls</span><span class="punctuation">}</span> with <span class="cook-ing">@honey</span>
+<span class="punctuation">-</span> <span class="cook-ing">@coffee</span><span class="punctuation">{</span><span class="cook-amt">2</span><span class="punctuation">%</span><span class="cook-unit">cups</span><span class="punctuation">}</span>
+
+<span class="keyword">Dinner:</span>
+<span class="punctuation">-</span> <span class="cook-ing">@./Mains/Sheet-Pan Chicken</span><span class="punctuation">{</span><span class="cook-amt">2</span><span class="punctuation">}</span>
+<span class="punctuation">-</span> <span class="cook-ing">@./Salads/Simple Green</span><span class="punctuation">{</span><span class="cook-amt">2</span><span class="punctuation">%</span><span class="cook-unit">servings</span><span class="punctuation">}</span>
+
+<span class="comment">-- date night, make something nice</span>
+
+<span class="md-h2">== Snacks ==</span>
+<span class="punctuation">-</span> <span class="cook-ing">@apples</span><span class="punctuation">{</span><span class="cook-amt">6</span><span class="punctuation">}</span>
+<span class="punctuation">-</span> <span class="cook-ing">@dark chocolate</span><span class="punctuation">{</span><span class="cook-amt">1</span><span class="punctuation">%</span><span class="cook-unit">bar</span><span class="punctuation">}</span></div>
+      </div>
+
+      <!-- aisle.conf example -->
+      <div class="example-card dark">
+        <div class="example-header">aisle.conf — Shopping Config</div>
+        <div class="code-block">
+<span class="comment"># Organize ingredients by store aisle</span>
+
+<span class="md-h2">[produce]</span>
+<span class="variable">spinach</span>
+<span class="variable">carrots</span>
+<span class="variable">onions</span>
+<span class="variable">garlic</span>
+<span class="variable">apples</span>
+
+<span class="md-h2">[dairy]</span>
+<span class="variable">milk</span>
+<span class="variable">butter</span>
+<span class="variable">eggs</span>
+<span class="variable">greek yogurt</span><span class="punctuation">|</span><span class="string">yogurt</span>
+
+<span class="md-h2">[pantry]</span>
+<span class="variable">flour</span>
+<span class="variable">olive oil</span>
+<span class="variable">sea salt</span><span class="punctuation">|</span><span class="string">salt</span>
+<span class="variable">honey</span></div>
+      </div>
+
     </div>
   </section>
   
