@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Cooklang",
+  "scopeName": "source.cooklang",
+  "patterns": [
+    { "include": "#frontmatter" },
+    { "include": "#metadata" },
+    { "include": "#comment" },
+    { "include": "#section" },
+    { "include": "#ingredient" },
+    { "include": "#cookware" },
+    { "include": "#timer" }
+  ],
+  "repository": {
+    "frontmatter": {
+      "name": "meta.frontmatter.cooklang",
+      "begin": "\\A(---)",
+      "end": "^(---)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.frontmatter.cooklang" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.frontmatter.cooklang" }
+      },
+      "patterns": [
+        {
+          "match": "^([\\w-]+)(:)\\s*(.*)$",
+          "captures": {
+            "1": { "name": "entity.name.tag.yaml" },
+            "2": { "name": "punctuation.separator.key-value.yaml" },
+            "3": { "name": "string.unquoted.yaml" }
+          }
+        }
+      ]
+    },
+    "metadata": {
+      "name": "meta.metadata.cooklang",
+      "match": "^(>>)\\s*([^:]+)(:)\\s*(.*)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.metadata.cooklang" },
+        "2": { "name": "entity.name.tag.cooklang" },
+        "3": { "name": "punctuation.separator.key-value.cooklang" },
+        "4": { "name": "string.unquoted.cooklang" }
+      }
+    },
+    "comment": {
+      "name": "comment.line.double-dash.cooklang",
+      "match": "--.*$"
+    },
+    "section": {
+      "name": "markup.heading.cooklang",
+      "match": "^(==)\\s*(.+?)\\s*(==)\\s*$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.cooklang" },
+        "2": { "name": "entity.name.section.cooklang" },
+        "3": { "name": "punctuation.definition.heading.cooklang" }
+      }
+    },
+    "ingredient": {
+      "name": "entity.name.ingredient.cooklang",
+      "match": "(@)([\\w][\\w\\s]*?)(?:(\\{)([^}]*)(\\}))?(?=\\s|$|[.,;:!?)])",
+      "captures": {
+        "1": { "name": "punctuation.definition.ingredient.cooklang" },
+        "2": { "name": "variable.other.ingredient.cooklang" },
+        "3": { "name": "punctuation.definition.quantity.begin.cooklang" },
+        "4": { "name": "constant.numeric.quantity.cooklang" },
+        "5": { "name": "punctuation.definition.quantity.end.cooklang" }
+      }
+    },
+    "cookware": {
+      "name": "entity.name.cookware.cooklang",
+      "match": "(#)([\\w][\\w\\s]*?)(?:(\\{)([^}]*)(\\}))?(?=\\s|$|[.,;:!?)])",
+      "captures": {
+        "1": { "name": "punctuation.definition.cookware.cooklang" },
+        "2": { "name": "support.function.cookware.cooklang" },
+        "3": { "name": "punctuation.definition.quantity.begin.cooklang" },
+        "4": { "name": "constant.numeric.quantity.cooklang" },
+        "5": { "name": "punctuation.definition.quantity.end.cooklang" }
+      }
+    },
+    "timer": {
+      "name": "entity.name.timer.cooklang",
+      "match": "(~)([\\w][\\w\\s]*?)?(\\{)([^}]*)(\\})",
+      "captures": {
+        "1": { "name": "punctuation.definition.timer.cooklang" },
+        "2": { "name": "variable.other.timer-name.cooklang" },
+        "3": { "name": "punctuation.definition.time.begin.cooklang" },
+        "4": { "name": "constant.numeric.time.cooklang" },
+        "5": { "name": "punctuation.definition.time.end.cooklang" }
+      }
+    }
+  }
+}

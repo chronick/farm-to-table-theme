@@ -37,9 +37,14 @@ Rich, colorful heading hierarchy—each level gets its own produce color. Bold i
 
 First-class support for [Cooklang](https://cooklang.org/) recipe files:
 - `@ingredients` pop in spinach green
-- `#cookware` stands out in apple red  
+- `#cookware` stands out in apple red
 - `~{timers}` glow in eggplant purple
 - `>> metadata` styled in cool sky blue
+
+**Supported file types:**
+- `.cook` — Recipe files
+- `.menu` — Meal planning files
+- `aisle.conf` — Shopping list configuration
 
 Perfect for managing your recipe collection as code!
 

@@ -37,6 +37,33 @@
         "uiTheme": "vs",
         "path": "./themes/farm-to-table-light.json"
       }
+    ],
+    "languages": [
+      {
+        "id": "cooklang",
+        "aliases": ["Cooklang", "cooklang"],
+        "extensions": [".cook", ".menu"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "cooklang-conf",
+        "aliases": ["Cooklang Config", "aisle.conf"],
+        "filenames": ["aisle.conf"],
+        "extensions": [".conf"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cooklang",
+        "scopeName": "source.cooklang",
+        "path": "./syntaxes/cooklang.tmLanguage.json"
+      },
+      {
+        "language": "cooklang-conf",
+        "scopeName": "source.cooklang-conf",
+        "path": "./syntaxes/cooklang-conf.tmLanguage.json"
+      }
     ]
   },
   "repository": {
