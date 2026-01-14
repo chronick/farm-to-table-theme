@@ -1,4 +1,4 @@
-# Farm to Table Theme - Setup Guide
+# Endless Bounty Theme - Setup Guide
 
 ## Quick Start: Load Locally in Cursor/VS Code
 
@@ -6,40 +6,40 @@
 
 ```bash
 # Clone your repo
-git clone https://github.com/chronick/farm-to-table-theme.git
-cd farm-to-table-theme
+git clone https://github.com/chronick/endless-bounty.git
+cd endless-bounty
 
 # Create symlink to Cursor extensions folder
 # macOS:
-ln -s "$(pwd)" ~/.cursor/extensions/farm-to-table-theme
+ln -s "$(pwd)" ~/.cursor/extensions/endless-bounty
 
 # Or for VS Code:
-ln -s "$(pwd)" ~/.vscode/extensions/farm-to-table-theme
+ln -s "$(pwd)" ~/.vscode/extensions/endless-bounty
 
 # Restart Cursor/VS Code, then:
-# Cmd+K, Cmd+T → Select "Farm to Table Dark" or "Farm to Table Light"
+# Cmd+K, Cmd+T → Select "Endless Bounty Dark" or "Endless Bounty Light"
 ```
 
 ### Option 2: Copy Folder
 
 ```bash
 # macOS - Cursor
-cp -r farm-to-table-theme ~/.cursor/extensions/
+cp -r endless-bounty ~/.cursor/extensions/
 
-# macOS - VS Code  
-cp -r farm-to-table-theme ~/.vscode/extensions/
+# macOS - VS Code
+cp -r endless-bounty ~/.vscode/extensions/
 
 # Linux - Cursor
-cp -r farm-to-table-theme ~/.cursor/extensions/
+cp -r endless-bounty ~/.cursor/extensions/
 
 # Linux - VS Code
-cp -r farm-to-table-theme ~/.vscode/extensions/
+cp -r endless-bounty ~/.vscode/extensions/
 
 # Windows - Cursor
-xcopy farm-to-table-theme %USERPROFILE%\.cursor\extensions\farm-to-table-theme /E /I
+xcopy endless-bounty %USERPROFILE%\.cursor\extensions\endless-bounty /E /I
 
 # Windows - VS Code
-xcopy farm-to-table-theme %USERPROFILE%\.vscode\extensions\farm-to-table-theme /E /I
+xcopy endless-bounty %USERPROFILE%\.vscode\extensions\endless-bounty /E /I
 ```
 
 Then restart and select the theme with `Cmd+K, Cmd+T` (or `Ctrl+K, Ctrl+T`).
@@ -58,9 +58,9 @@ npm install -g @vscode/vsce
 ### Build the Package
 
 ```bash
-cd farm-to-table-theme
+cd endless-bounty
 
-# Package it (creates farm-to-table-theme-1.0.0.vsix)
+# Package it (creates endless-bounty-1.0.0.vsix)
 vsce package
 ```
 
@@ -68,10 +68,10 @@ vsce package
 
 ```bash
 # Cursor
-cursor --install-extension farm-to-table-theme-1.0.0.vsix
+cursor --install-extension endless-bounty-1.0.0.vsix
 
 # VS Code
-code --install-extension farm-to-table-theme-1.0.0.vsix
+code --install-extension endless-bounty-1.0.0.vsix
 ```
 
 ---
@@ -113,7 +113,7 @@ vsce publish patch  # 1.0.0 → 1.0.1
 ### 4. Verify
 
 Your theme will appear at:
-`https://marketplace.visualstudio.com/items?itemName=your-publisher-name.farm-to-table-theme`
+`https://marketplace.visualstudio.com/items?itemName=your-publisher-name.endless-bounty`
 
 ---
 
@@ -121,16 +121,16 @@ Your theme will appear at:
 
 ```bash
 # Initialize repo
-cd farm-to-table-theme
+cd endless-bounty
 git init
 git add .
-git commit -m "Initial commit: Farm to Table theme v1.0.0"
+git commit -m "Initial commit: Endless Bounty theme v1.0.0"
 
 # Create GitHub repo (using gh CLI, or do manually on github.com)
-gh repo create farm-to-table-theme --public --source=. --push
+gh repo create endless-bounty --public --source=. --push
 
 # Or manually:
-git remote add origin https://github.com/chronick/farm-to-table-theme.git
+git remote add origin https://github.com/chronick/endless-bounty.git
 git branch -M main
 git push -u origin main
 ```
@@ -148,7 +148,7 @@ The `docs/` folder contains a ready-to-go GitHub Pages site.
 3. Branch: `main`, folder: `/docs`
 4. Save
 
-Your site will be live at: `https://chronick.github.io/farm-to-table-theme/`
+Your site will be live at: `https://chronick.github.io/endless-bounty/`
 
 ---
 
@@ -170,15 +170,15 @@ git push
 ## File Structure
 
 ```
-farm-to-table-theme/
+endless-bounty/
 ├── package.json          # Extension manifest
 ├── README.md             # Marketplace description
 ├── CHANGELOG.md          # Version history
 ├── LICENSE               # MIT license
 ├── .vscodeignore         # Files to exclude from package
 ├── themes/
-│   ├── farm-to-table-dark.json
-│   └── farm-to-table-light.json
+│   ├── endless-bounty-dark.json
+│   └── endless-bounty-light.json
 ├── docs/                 # GitHub Pages site
 │   ├── index.html
 │   └── preview.html
