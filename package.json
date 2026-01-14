@@ -87,6 +87,7 @@
   "bugs": {
     "url": "https://github.com/chronick/endless-bounty/issues"
   },
+  "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#1a1611",
     "theme": "dark"
