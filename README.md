@@ -2,7 +2,7 @@
 
 A warm, organic VS Code color theme inspired by fresh-picked vegetables at the farmers market.
 
-![Preview](https://raw.githubusercontent.com/chronick/endless-bounty/main/docs/screenshot.png)
+![Preview](https://raw.githubusercontent.com/algonormative/endless-bounty/main/docs/screenshot.png)
 
 ## Install
 
@@ -82,8 +82,8 @@ npm run dev
 
 ## Links
 
-- [Live Preview](https://chronick.github.io/endless-bounty/)
-- [GitHub](https://github.com/chronick/endless-bounty)
+- [Live Preview](https://algonormative.github.io/endless-bounty/)
+- [GitHub](https://github.com/algonormative/endless-bounty)
 - [Cooklang](https://cooklang.org/) — The recipe markup language
 
 ## License

@@ -81,11 +81,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chronick/endless-bounty.git"
+    "url": "git+https://github.com/algonormative/endless-bounty.git"
   },
-  "homepage": "https://chronick.github.io/endless-bounty/",
+  "homepage": "https://algonormative.github.io/endless-bounty/",
   "bugs": {
-    "url": "https://github.com/chronick/endless-bounty/issues"
+    "url": "https://github.com/algonormative/endless-bounty/issues"
   },
   "icon": "images/icon.png",
   "galleryBanner": {
